@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 403 - Akses Ditolak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-800">
+    <div class="relative bg-gray-800 p-10 rounded-3xl shadow-2xl text-center max-w-md w-full border border-purple-500/30 transform transition-all duration-300 hover:scale-105">
+        <!-- Animated background elements -->
+        <div class="absolute -top-3 -left-3 w-6 h-6 rounded-full bg-purple-500 animate-pulse"></div>
+        <div class="absolute -bottom-3 -right-3 w-6 h-6 rounded-full bg-red-500 animate-pulse"></div>
+        
+        <!-- Main content -->
+        <div class="relative z-10">
+            <div class="flex justify-center mb-6 animate__animated animate__shakeX">
+                <svg class="w-20 h-20 text-red-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                </svg>
+            </div>
+            
+            <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-purple-500 mb-3 animate__animated animate__fadeIn">
+                Error 403
+            </h1>
+            <h2 class="text-2xl font-bold text-gray-200 mb-2">Akses Ditolak</h2>
+            
+            <p class="mt-4 text-gray-300 leading-relaxed">
+                Website Anda telah kadaluwarsa. Silakan hubungi administrator untuk memperpanjang layanan.
+            </p>
+            
+            <div class="mt-8 space-y-4">
+                <button class="px-6 py-3 bg-gradient-to-r from-purple-600 to-red-600 text-white font-medium rounded-full hover:opacity-90 transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-purple-500/30">
+                    Hubungi Support
+                </button>
+                
+                <div class="text-sm text-gray-400 mt-4">
+                    <p>Error ID: <span class="font-mono bg-gray-700 px-2 py-1 rounded">403-${Date.now().toString().slice(-6)}</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating particles -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden rounded-3xl opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-purple-400 animate-float"></div>
+            <div class="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-red-400 animate-float animation-delay-2000"></div>
+            <div class="absolute bottom-1/4 right-1/3 w-2 h-2 rounded-full bg-white animate-float animation-delay-4000"></div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(-100px) translateX(20px); opacity: 0; }
+        }
+        .animate-float {
+            animation: float 8s infinite linear;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</body>
+</html>
